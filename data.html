@@ -94,5 +94,19 @@
   <footer>
     <p>&copy; 2025 Zackery Fox</p>
   </footer>
+  <!-- Google Analytics Event Tracking -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const downloadLink = document.getElementById('irs-download');
+      if (downloadLink) {
+        downloadLink.addEventListener('click', function () {
+          gtag('event', 'download', {
+            'event_category': 'Data',
+            'event_label': 'IRS Attention Dataset'
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
