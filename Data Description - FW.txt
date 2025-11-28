@@ -5,7 +5,7 @@ This document describes the dataset constructed from daily EDGAR server log file
 
 Please review and reference the following paper when using these data:
 
-Fox, Z. D. and R. Wilson. Double trouble? IRS’s attention to financial accounting restatements. Review of Accounting Studies 28: 2002- 2038. 
+Fox, Z. D. and R. Wilson. Double trouble? IRS’s attention to financial accounting restatements. Review of Accounting Studies 28: 2002 - 2038. 
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 DATA DESCRIPTION:
