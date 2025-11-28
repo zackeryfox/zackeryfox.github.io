@@ -1,0 +1,61 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+PRELIMINARIES: Please turn on "word wrap" when reading this document.
+
+This document describes the Tax Holiday Instances database. The dataset identifies instances in which U.S. publicly traded firms disclose the presence of a foreign tax holiday in their annual Form 10-K filings. The purpose of this database is to provide a systematic and machine-readable record of tax holiday mentions across firms and years for use in empirical research.
+
+Please review and reference the following papers when using these data:
+
+Fox, Z. D., L. Krull, and S. G. Rane. 2025. Foreign tax holiday participation and U.S. job and investment loss. Contemporary Accounting Research, Forthcoming
+
+* The original study did not use generative artificial intelligence. However, the present dataset extends the sample period and coverage using AI-assisted text identification applied to an expanded set of machine-readable 10-K filings. The data include observations spanning 1993 to 2024 following the approach described in Section 3 of the original study.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DATA DESCRIPTION:
+
+•	Number of observations (rows): 6,231
+•	Unit of observation: A single mention of a foreign tax holiday within a firm’s Form 10-K filing.
+•	Indexing variable: CIK (SEC Central Index Key)
+•	Sample period: 1993–2024
+•	Sorting: Observations are sorted by CIK and Filing Date.
+•	Requirement for inclusion: The firm-year must have a machine-readable 10-K.
+
+A single firm-year may contain multiple tax holiday instances if the filing references holidays in more than one country.
+
+The dataset was constructed using the following procedure:
+1.	Textual analysis was conducted on machine-readable 10-K filings obtained from SEC EDGAR for all available firm-years.
+2.	Python-based text parsing procedures were used to scan filings for key terms related to tax holidays, including “tax holiday,” “tax incentive,” “tax exemption,” and closely related variants.
+3.	Each relevant passage was extracted together with a context window of approximately 500 characters before and after the matched phrase, ensuring sufficient contextual information for accurate interpretation.
+4.	Country names were identified when the filing explicitly stated where the tax holiday was received.
+5.	Extracted passages were flagged as potential tax holiday mentions and passed through a secondary classification step using generative AI to determine whether each represented a true instance of tax holiday usage.
+6.	A manual audit of 100 randomly selected passages was performed to benchmark accuracy; the review indicated an approximate 95% correct classification rate.
+7.	Filings lacking machine-readable text were excluded because textual extraction could not be reliably performed.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+VARIBLE DEFINITIONS
+
+The CSV file contains the following four variables:
+(1) CIK
+•	Type: Integer
+•	Definition: SEC Central Index Key identifying the registrant firm.
+•	Notes: The CIK uniquely identifies the filing entity. Users merging with Compustat should crosswalk CIKs to gvkeys.
+(2) Filedate
+•	Type: Date (YYYY-MM-DD)
+•	Definition: The date on which the firm filed its Form 10-K with the SEC.
+•	Notes: This corresponds to the official filing date recorded in EDGAR.
+(3) Datadate
+•	Type: Date (YYYY-MM-DD)
+•	Definition: The financial statement date as reported within the 10-K (typically fiscal year-end).
+•	Notes: This date reflects the period the filing pertains to, not when it was filed.
+(4) Country
+•	Type: String
+•	Definition: The country in which the tax holiday is reported to have been granted.
+•	Coding: Free-text country names standardized where possible; missing when the filing does not specify a country.
+•	Notes: Some filings reference tax incentives without naming the specific country; these are recorded with a blank value.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+CONTACT INFORMATION
+
+Questions, error reports, or suggestions for future updates may be directed to:
+zack.fox@byu.edu
+
+
