@@ -1,0 +1,73 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+PRELIMINARIES: Please turn on "word wrap" when reading this document.
+
+This document describes the dataset constructed from daily EDGAR server log files obtained from the U.S. Securities and Exchange Commission (SEC). These logs record every request for a publicly available SEC filing hosted on the EDGAR servers. Following Fox and Wilson (2023), we identify instances in which the Internal Revenue Service (IRS) downloads corporate filings and use these data to study government information acquisition behavior.
+
+Please review and reference the following paper when using these data:
+
+Fox, Z. D. and R. Wilson. Double trouble? IRS’s attention to financial accounting restatements. Review of Accounting Studies 28: 2002- 2038. 
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+DATA DESCRIPTION:
+
+•	Number of observations (rows): 1,048,575
+•	Unit of observation: A single IRS download event.
+•	Indexing variable: CIK (SEC Central Index Key)
+•	Sample period: 2003-2017
+	Data source: SEC EDGAR daily server log files
+
+EDGAR maintains a complete set of server logs that record every download request for SEC filings. Each log entry includes:
+
+	The IP address making the request
+	The date and time of the request
+	A URL containing the accession number of the filing accessed
+	The SEC CIK of the firm whose filing is being retrieved
+
+By matching known IRS-controlled IP address blocks to these logs, we identify the universe of IRS downloads of public-company filings. Each IRS download is recorded as its own event in the dataset.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+VARIBLE DEFINITIONS
+
+The CSV file contains the following four variables:
+(1) ip
+•	Type: String
+•	Definition: The IP address recorded in the EDGAR log for the download request.
+	Notes: IP ranges correspond to IRS-controlled servers and are used to identify IRS access events.
+(2) date
+•	Type: Date (YYYY-MM-DD)
+•	Definition: Calendar date on which the IRS downloaded the filing.
+(3) time
+•	Type: Time (HH:MM:SS)
+•	Definition: Timestamp of the download request recorded by EDGAR.
+(4) zone
+•	Type: Numeric
+•	Definition: Time-zone offset associated with the server log timestamp.
+(5) cik
+•	Type: Integer
+•	Definition: Internal numeric identifier assigned during data construction to group download events by unique IRS request stream.
+(6) accession
+•	Type: String
+•	Definition: The SEC accession number corresponding to the downloaded filing.
+	Notes: Can be used to obtain the specific filing from EDGAR or other SEC repositories.
+(7) doc
+•	Type: String
+•	Definition: The specific document within the filing that was retrieved (e.g., 10k.htm, ktii_03.htm, .txt).
+	Notes: Multiple documents may be downloaded within the same accession number.
+(8) FormType
+•	Type: String
+•	Definition: SEC form type associated with the retrieved filing (e.g., 10-K, 10-Q, 8-K, SC 13D, DEF 14A).
+	Notes: Useful for categorizing IRS requests by filing type.
+(9) DateFiled
+•	Type: Date (YYYY-MM-DD)
+•	Definition: Official SEC filing date corresponding to the accession number.
+(10) - (12) year, month, day
+•	Type: Numeric
+•	Definition: Components parsed from the date variable for easier aggregation in panel or time-series analyses.
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+CONTACT INFORMATION
+
+Questions, error reports, or suggestions for future updates may be directed to:
+zack.fox@byu.edu
+
+
