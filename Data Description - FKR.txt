@@ -3,7 +3,7 @@ PRELIMINARIES: Please turn on "word wrap" when reading this document.
 
 This document describes the Tax Holiday Instances database. The dataset identifies instances in which U.S. publicly traded firms disclose the presence of a foreign tax holiday in their annual Form 10-K filings. The purpose of this database is to provide a systematic and machine-readable record of tax holiday mentions across firms and years for use in empirical research.
 
-Please review and reference the following papers when using these data:
+Please review and reference the following paper when using these data:
 
 Fox, Z. D., L. Krull, and S. G. Rane. 2025. Foreign tax holiday participation and U.S. job and investment loss. Contemporary Accounting Research, Forthcoming
 
@@ -16,7 +16,6 @@ DATA DESCRIPTION:
 •	Unit of observation: A single mention of a foreign tax holiday within a firm’s Form 10-K filing.
 •	Indexing variable: CIK (SEC Central Index Key)
 •	Sample period: 1993–2024
-•	Sorting: Observations are sorted by CIK and Filing Date.
 •	Requirement for inclusion: The firm-year must have a machine-readable 10-K.
 
 A single firm-year may contain multiple tax holiday instances if the filing references holidays in more than one country.
@@ -57,5 +56,6 @@ CONTACT INFORMATION
 
 Questions, error reports, or suggestions for future updates may be directed to:
 zack.fox@byu.edu
+
 
 
