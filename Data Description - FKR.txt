@@ -3,7 +3,7 @@ PRELIMINARIES: Please turn on "word wrap" when reading this document.
 
 This document describes the Tax Holiday Instances database. The dataset identifies instances in which U.S. publicly traded firms disclose the presence of a foreign tax holiday in their annual Form 10-K filings. The purpose of this database is to provide a systematic and machine-readable record of tax holiday mentions across firms and years for use in empirical research.
 
-Please review and reference the following paper when using these data:
+Please review and reference the following papers when using these data:
 
 Fox, Z. D., L. Krull, and S. G. Rane. 2025. Foreign tax holiday participation and U.S. job and investment loss. Contemporary Accounting Research, Forthcoming
 
@@ -16,18 +16,20 @@ DATA DESCRIPTION:
 •	Unit of observation: A single mention of a foreign tax holiday within a firm’s Form 10-K filing.
 •	Indexing variable: CIK (SEC Central Index Key)
 •	Sample period: 1993–2024
+•	Sorting: Observations are sorted by CIK and Filing Date.
 •	Requirement for inclusion: The firm-year must have a machine-readable 10-K.
 
 A single firm-year may contain multiple tax holiday instances if the filing references holidays in more than one country.
 
 The dataset was constructed using the following procedure:
-1.	Textual analysis was conducted on machine-readable 10-K filings obtained from SEC EDGAR for all available firm-years.
-2.	Python-based text parsing procedures were used to scan filings for key terms related to tax holidays, including “tax holiday,” “tax incentive,” “tax exemption,” and closely related variants.
-3.	Each relevant passage was extracted together with a context window of approximately 500 characters before and after the matched phrase, ensuring sufficient contextual information for accurate interpretation.
-4.	Country names were identified when the filing explicitly stated where the tax holiday was received.
-5.	Extracted passages were flagged as potential tax holiday mentions and passed through a secondary classification step using generative AI to determine whether each represented a true instance of tax holiday usage.
-6.	A manual audit of 100 randomly selected passages was performed to benchmark accuracy; the review indicated an approximate 95% correct classification rate.
-7.	Filings lacking machine-readable text were excluded because textual extraction could not be reliably performed.
+1.	We identified machine-readable Form 10-K filings obtained from SEC EDGAR for U.S. publicly traded firms over the sample period.
+2. 	We implemented a Python script to parse each 10-K, recognizing that firms may disclose tax holiday participation in different locations within their annual filings.
+3.	Following Chow et al. (2023), we used the list of tax holiday countries from their study and searched each 10-K for instances in which the word “incentive” or “holiday” appeared within 30 characters of a listed country.
+4.	For observations satisfying the country-proximity criterion in Step 3, we further required that the word “incentive” or “holiday” appear within 800 characters of any mention of the word “tax.”
+5.	We categorized a disclosure as tax holiday participation if, and only if, both the country-proximity and tax-proximity criteria were satisfied.
+6.	Each qualifying disclosure was recorded at the firm-country-filing level, with Country coded as the jurisdiction associated with the disclosed tax holiday. If a single 10-K referenced tax holidays in multiple countries, each country was recorded as a separate tax holiday instance.
+7.	Filings lacking machine-readable text were excluded because the disclosure-identification procedure could not be reliably applied.
+8.	For the present expanded database, candidate tax holiday disclosures identified through the rule-based procedure above were reviewed using generative AI as a secondary classification step. The AI-assisted review was used to help determine whether the extracted disclosure represented a true instance of foreign tax holiday participation and to support consistent country identification and standardization. This AI-assisted step applies to the expanded database and was not part of the empirical procedure used in the original study.
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 VARIBLE DEFINITIONS
@@ -56,6 +58,5 @@ CONTACT INFORMATION
 
 Questions, error reports, or suggestions for future updates may be directed to:
 zack.fox@byu.edu
-
 
 
