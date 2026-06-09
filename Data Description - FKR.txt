@@ -5,7 +5,7 @@ This document describes the Tax Holiday Instances database. The dataset identifi
 
 Please review and reference the following papers when using these data:
 
-Fox, Z. D., L. Krull, and S. G. Rane. 2025. Foreign tax holiday participation and U.S. job and investment loss. Contemporary Accounting Research, Forthcoming
+Fox, Z. D., L. Krull, and S. G. Rane. 2026. Foreign tax holiday participation and U.S. job and investment loss. Contemporary Accounting Research, 43(1): 817-848
 
 * The original study did not use generative artificial intelligence. However, the present dataset extends the sample period and coverage using AI-assisted text identification applied to an expanded set of machine-readable 10-K filings. The data include observations spanning 1993 to 2024 following the approach described in Section 3 of the original study.
 
