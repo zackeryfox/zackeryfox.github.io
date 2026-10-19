@@ -117,4 +117,12 @@ section[id] { scroll-margin-top: 24px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
-.paper-abstract-link { margin: 12px 0 0; font-size: 14px; }
+
+/* Native disclosure controls separate published abstracts from working-paper summaries. */
+.paper-abstract { margin-top: 12px; }
+.paper-abstract summary { width: fit-content; max-width: 100%; min-height: 44px; padding-block: 8px; color: var(--accent); font-size: 14px; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+.paper-abstract[open] summary { margin-bottom: 6px; }
+.abstract-content { max-width: 760px; padding: 16px 18px; background: #f0f1ed; border-left: 2px solid var(--line); color: var(--muted); }
+.abstract-content p { font-size: 15px; line-height: 1.75; margin: 0 0 14px; }
+.abstract-content p:last-child { margin-bottom: 0; }
+.abstract-content .abstract-source { font-size: 13px; }
