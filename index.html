@@ -1,106 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zackery Fox, PhD | Assistant Professor of Accounting</title>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zackery Fox is an assistant professor of accounting at BYU. Explore research on tax policy, corporate investment, and disclosure, plus data and CV.">
+  <meta name="theme-color" content="#172c41">
+  <title>Zackery Fox, PhD | Accounting Research | BYU</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://zackeryfox.github.io/">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6LZQKSLN0"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R6LZQKSLN0');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6LZQKSLN0');
   </script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #00467f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      background: #003355;
-    }
-    nav a {
-      display: inline-block;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #002244;
-    }
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .bio {
-      text-align: center;
-    }
-    .bio img {
-      width: 200px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-    }
-  </style>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Zackery Fox</h1>
-    <p>Assistant Professor of Accounting, Andersen Foundation Fellowship | Brigham Young University</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html">Zackery Fox</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">About</a>
+      <a href="research.html">Research</a>
+      <a href="data.html">Data</a>
+      <a href="cv.html">CV</a>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-    <a href="data.html">Data</a>
-  </nav>
-  <section class="bio">
-    <img src="zackery-fox-headshot.jpg" alt="Zackery Fox Headshot">
-    <h2>Welcome</h2>
-    <p>
-      Professor Fox is an assistant professor in the School of Accountancy at the BYU Marriott School of Business. He earned his bachelors degree at Utah Tech University, masters degree at BYU, and his doctorate at the University of Oregon, all in accounting, where he was awarded the Doctoral Fellowship for Outstanding Doctoral Student. Prior to joining BYU Marriott in 2022, he was on faculty at the Mays School of Business at Texas A&M University.<br><br>
+  <main id="main-content" class="container">
 
-      His research focuses primarily on the real consequences of tax policy and corporate investment through real activity and other tax planning strategies. He also focuses on corporate disclosure policies, with a particular interest in disclosure choices as a tool to learn from stock prices. His research has been published in leading journals, including the Accounting Review, Review of Accounting Studies, and Contemporary Accounting Research. His Dissertation was awarded the Competitive Manuscript Award in 2025 by the American Accounting Association.
-    </p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: zack.fox@byu.edu</p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=RpyhGLwAAAAJ&hl=en" target="_blank">Google Scholar</a> |
-      <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2649408" target="_blank">SSRN</a> |
-      <a href="https://www.linkedin.com/in/zack-fox-3b601b10a/" target="_blank">LinkedIn</a>
-    </p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Zackery Fox</p>
-  </footer>
+    <section class="hero" aria-label="Introduction">
+      <div>
+        <p class="eyebrow">BYU Marriott School of Business</p>
+        <h1>Zackery Fox</h1>
+        <p class="role">Assistant Professor of Accounting<br>Andersen Foundation Fellowship</p>
+        <p class="intro">I study how tax policy and corporate disclosure shape investment and business decisions.</p>
+        <div class="actions">
+          <a class="button button-primary" href="research.html">Explore research <span aria-hidden="true">&nbsp;&rarr;</span></a>
+          <a class="button" href="Zack%20Fox%20Vita.pdf" target="_blank" rel="noopener noreferrer">Download CV <span class="file-type">&nbsp;(PDF)</span></a>
+        </div>
+      </div>
+      <img class="portrait" src="zackery-fox-headshot.jpg" alt="Zackery Fox" width="214" height="300" fetchpriority="high">
+    </section>
+    <section class="content-section" aria-labelledby="selected-research">
+      <div class="section-heading"><h2 id="selected-research">Selected research</h2><a href="research.html">All research <span aria-hidden="true">&rarr;</span></a></div>
+      <ul class="paper-list"><li class="paper"><h3><a href="https://doi.org/10.2308/TAR-2024-0457" target="_blank" rel="noopener noreferrer">Investment Opportunities, Market Feedback, and Voluntary Disclosure: Evidence from the Shale Oil Revolution</a></h3><p class="paper-meta"><em>with Jaewoo Kim and Bryce Schonberger</em><br>
+        <strong>The Accounting Review</strong>, 2026 101(2): 179-213</p></li>
+<li class="paper"><h3><a href="https://doi.org/10.1111/1911-3846.70029" target="_blank" rel="noopener noreferrer">Foreign Tax Holiday Participation and U.S. Job and Investment Loss</a></h3><p class="paper-meta"><em>with Linda Krull and Scott Rane</em><br>
+          <strong>Contemporary Accounting Research</strong>, 2026 43(1): 817-848</p></li></ul>
+    </section>
+    <section class="content-section" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="prose">
+        <p>I am an assistant professor in the School of Accountancy at the BYU Marriott School of Business. My research examines the real consequences of tax policy, corporate investment and tax planning, and how firms use disclosure to learn from stock prices. My work has appeared in <em>The Accounting Review</em>, <em>Review of Accounting Studies</em>, and <em>Contemporary Accounting Research</em>.</p>
+        <p>I earned my bachelor's degree at Utah Tech University, my master's degree at BYU, and my doctorate at the University of Oregon, all in accounting. At Oregon, I received the Doctoral Fellowship for Outstanding Doctoral Student. Before joining BYU in 2022, I was on the faculty at Texas A&amp;M University's Mays School of Business.</p>
+        <p>My dissertation received the American Accounting Association's 2025 Competitive Manuscript Award.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">
+  <a href="mailto:zack.fox@byu.edu">zack.fox@byu.edu</a>
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?user=RpyhGLwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2649408" target="_blank" rel="noopener noreferrer">SSRN</a>
+    <a href="https://www.linkedin.com/in/zack-fox-3b601b10a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <p class="copyright">&copy; 2026 Zackery Fox</p>
+</footer>
 </body>
 </html>

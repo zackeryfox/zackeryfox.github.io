@@ -1,129 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zackery Fox, PhD | Data </title>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download research data and documentation for IRS attention and foreign tax holiday participation studies by Zackery Fox and coauthors.">
+  <meta name="theme-color" content="#172c41">
+  <title>Research Data | Zackery Fox</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://zackeryfox.github.io/data.html">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6LZQKSLN0"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R6LZQKSLN0');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6LZQKSLN0');
   </script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #00467f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      background: #003355;
-    }
-    nav a {
-      display: inline-block;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #002244;
-    }
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .bio {
-      text-align: center;
-    }
-    .bio img {
-      width: 200px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-    }
-  </style>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Zackery Fox</h1>
-    <p>Assistant Professor of Accounting, Andersen Foundation Fellowship | Brigham Young University</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html">Zackery Fox</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="data.html" aria-current="page">Data</a>
+      <a href="cv.html">CV</a>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-    <a href="data.html">Data</a>
-  </nav>
-  <section>
-    <h2>Data</h2>
-    <p>Raw data underlying published research are available for download below. Please cite the appropriate sources when using these data.</p>
-    <ul>
-      <li>
-        <strong><a href="https://www.dropbox.com/scl/fi/tkg8vg5pq185j8ptvzxzj/SampleIRSDownloads.csv?rlkey=6cloijh3eujgowqwgme1wgvsq&st=63qn8xmm&dl=1" id="irs-download" target="_blank">IRS Attention – EDGAR Downloads by the IRS</a></strong><br>
-        Please cite: Fox, Z.D., Wilson, R. 2023. Double trouble? IRS’s attention to financial accounting restatements. <i>Rev Account Stud</i> 28, 2002–2038.<br>
-        <a href="Data Description - FW.txt" target="_blank">Data Description Sheet</a><br><br>
-        
-      </li>
-      <li>
-        <strong><a href="https://www.dropbox.com/scl/fi/8yit6bxxurclzi2omc5ew/Tax_holiday_sample.csv?rlkey=1n4r52ejebo1qng2ijhunsjps&st=gct57vih&dl=1" id="Tax_holidays" target="_blank">Tax Holiday Participation</a></strong><br>
-        Please cite: Fox, Z.D., Krull, L.K., Rane, S.G. 2026. Foreign tax holiday participation and U.S. job and investment loss. <i>Contemp Account Res</i> 43(1), 817-848.<br>
-         <a href="Data Description - FKR.txt" target="_blank">Data Description Sheet</a>
-      </li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 Zackery Fox</p>
-  </footer>
-  <!-- Google Analytics Event Tracking -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const irs = document.getElementById('irs-download');
-      if (irs) {
-        irs.addEventListener('click', function () {
-          gtag('event', 'download', {
-            'event_category': 'Data',
-            'event_label': 'IRS Attention Dataset'
-          });
-        });
-      }
-      
-      const holidays = document.getElementById('Tax_holidays');
-      if (holidays) {
-        holidays.addEventListener('click', function () {
-          gtag('event', 'download', {
-            event_category: 'Data',
-            event_label: 'Tax Holiday Dataset'
-          });
-        });
-      }
-    });
-  </script>
+  <main id="main-content" class="container">
+<div class="page-intro"><p class="eyebrow">Research resources</p><h1>Data</h1><p>Raw data underlying published research are available below. Please cite the associated paper when using each dataset.</p></div><section class="dataset" aria-labelledby="irs-download-heading">
+      <h2 id="irs-download-heading">IRS Attention – EDGAR Downloads by the IRS</h2>
+      <p><strong>Please cite:</strong> Fox, Z.D., Wilson, R. 2023. Double trouble? IRS’s attention to financial accounting restatements. <i>Rev Account Stud</i> 28, 2002–2038.</p>
+      <div class="actions">
+        <a class="button button-primary" href="https://www.dropbox.com/scl/fi/tkg8vg5pq185j8ptvzxzj/SampleIRSDownloads.csv?rlkey=6cloijh3eujgowqwgme1wgvsq&amp;st=63qn8xmm&amp;dl=1" id="irs-download" data-download-label="IRS Attention Dataset" target="_blank" rel="noopener noreferrer">Download CSV <span aria-hidden="true">&nbsp;&darr;</span></a>
+        <a class="button" href="Data%20Description%20-%20FW.txt" target="_blank" rel="noopener noreferrer">Documentation (TXT)</a>
+      </div>
+    </section>
+<section class="dataset" aria-labelledby="Tax_holidays-heading">
+      <h2 id="Tax_holidays-heading">Tax Holiday Participation</h2>
+      <p><strong>Please cite:</strong> Fox, Z.D., Krull, L.K., Rane, S.G. 2026. Foreign tax holiday participation and U.S. job and investment loss. <i>Contemp Account Res</i> 43(1), 817-848.</p>
+      <div class="actions">
+        <a class="button button-primary" href="https://www.dropbox.com/scl/fi/8yit6bxxurclzi2omc5ew/Tax_holiday_sample.csv?rlkey=1n4r52ejebo1qng2ijhunsjps&amp;st=gct57vih&amp;dl=1" id="Tax_holidays" data-download-label="Tax Holiday Dataset" target="_blank" rel="noopener noreferrer">Download CSV <span aria-hidden="true">&nbsp;&darr;</span></a>
+        <a class="button" href="Data%20Description%20-%20FKR.txt" target="_blank" rel="noopener noreferrer">Documentation (TXT)</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer container">
+  <a href="mailto:zack.fox@byu.edu">zack.fox@byu.edu</a>
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?user=RpyhGLwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2649408" target="_blank" rel="noopener noreferrer">SSRN</a>
+    <a href="https://www.linkedin.com/in/zack-fox-3b601b10a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <p class="copyright">&copy; 2026 Zackery Fox</p>
+</footer>
 </body>
 </html>

@@ -1,92 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zackery Fox, PhD | CV </title>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Download Zackery Fox’s curriculum vitae and view a summary of his academic appointments and education.">
+  <meta name="theme-color" content="#172c41">
+  <title>Curriculum Vitae | Zackery Fox</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://zackeryfox.github.io/cv.html">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R6LZQKSLN0"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-R6LZQKSLN0');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-R6LZQKSLN0');
   </script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #00467f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      text-align: center;
-      background: #003355;
-    }
-    nav a {
-      display: inline-block;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background: #002244;
-    }
-    section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-    }
-    .bio {
-      text-align: center;
-    }
-    .bio img {
-      width: 200px;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-    }
-  </style>
+  <script src="site.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Zackery Fox</h1>
-    <p>Assistant Professor of Accounting, Andersen Foundation Fellowship | Brigham Young University</p>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header container">
+    <a class="brand" href="index.html">Zackery Fox</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="data.html">Data</a>
+      <a href="cv.html" aria-current="page">CV</a>
+    </nav>
   </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="research.html">Research</a>
-    <a href="cv.html">CV</a>
-    <a href="data.html">Data</a>
-  </nav>
-  <section>
-    <h2>Curriculum Vitae</h2>
-    <p><a href="Zack Fox Vita.pdf" target="_blank">Download my full CV (PDF)</a></p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Zackery Fox</p>
-  </footer>
+  <main id="main-content" class="container">
+
+    <div class="page-intro">
+      <p class="eyebrow">Academic background</p><h1>Curriculum vitae</h1>
+      <p>Download my full CV for publications, academic appointments, education, and other professional activities.</p>
+      <div class="actions"><a class="button button-primary" href="Zack%20Fox%20Vita.pdf" target="_blank" rel="noopener noreferrer">Download full CV (PDF) <span aria-hidden="true">&nbsp;&darr;</span></a></div>
+    </div>
+    <div class="cv-grid">
+      <section aria-labelledby="appointments"><h2 id="appointments">Appointments</h2>
+        <ul class="detail-list">
+          <li><strong>Brigham Young University</strong><span>Assistant Professor of Accounting<br>Andersen Foundation Fellowship<br>BYU Marriott School of Business<br>Joined in 2022</span></li>
+          <li><strong>Texas A&amp;M University</strong><span>Previous faculty appointment<br>Mays School of Business</span></li>
+        </ul>
+      </section>
+      <section aria-labelledby="education"><h2 id="education">Education</h2>
+        <ul class="detail-list">
+          <li><strong>University of Oregon</strong><span>Doctorate in Accounting</span></li>
+          <li><strong>Brigham Young University</strong><span>Master's degree in Accounting</span></li>
+          <li><strong>Utah Tech University</strong><span>Bachelor's degree in Accounting</span></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer container">
+  <a href="mailto:zack.fox@byu.edu">zack.fox@byu.edu</a>
+  <div class="footer-links">
+    <a href="https://scholar.google.com/citations?user=RpyhGLwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=2649408" target="_blank" rel="noopener noreferrer">SSRN</a>
+    <a href="https://www.linkedin.com/in/zack-fox-3b601b10a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <p class="copyright">&copy; 2026 Zackery Fox</p>
+</footer>
 </body>
 </html>
